@@ -23,5 +23,9 @@ def content_page():
     return render_template("about.html", demo=demo, title='About')
 
 
+@app.route('/blog')
+def blog_page():
+    return render_template("blog.html")
+
 if __name__ == '__main__':
     app.run(debug=True)  # set debug mode = true, auto reload code without ctrl + C
