@@ -5,5 +5,5 @@ env/
 venv/
 env.bak/
 venv.bak/
-__pycache__
-.idea
+__pycache__/
+.idea/
