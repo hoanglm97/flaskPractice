@@ -1,0 +1,11 @@
+{% extends "layout.html"%}
+{% block content%}
+    {% for l in demo %}
+        <p> <b>Name:</b> {{l.name}}</p>
+        <p> <b>Age: </b> {{l.age}}</p>
+        <p> <b>Date Of Birth: </b> {{l.date_of_birth}}</p>
+        <p> <b>Job: </b> {{l.job}}</p>
+        <p> <b>Company: </b> {{l.company}}</p>
+    {% endfor %}
+{% endblock content%}
+
