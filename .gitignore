@@ -44,7 +44,7 @@ MANIFEST
 *.manifest
 *.spec
 .gitignore
-
+get-pip.py
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
