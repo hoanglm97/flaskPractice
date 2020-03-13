@@ -1,6 +1,7 @@
 #Enviroments
 .env
 .venv
-
-*.idea
-*__pycache__
+env/
+venv/
+__pycache__/
+.idea/
