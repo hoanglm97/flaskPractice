@@ -1,7 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
+from form import RegistrationForm, LoginForm
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'fc5692d5a1204f21b4bcd49d30d2637b'
 demo = [
     {
         'name': 'Le Minh Hoang',
@@ -22,10 +24,16 @@ def my_home():
 def content_page():
     return render_template("about.html", demo=demo, title='About')
 
+@app.route('/register')
+def register():
+    form = RegistrationForm()
+    return render_template("register.html", title="Register", form=form)
 
-@app.route('/blog')
-def blog_page():
-    return render_template("blog.html")
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template("login.html", title="Login", form=form)
+
 
 if __name__ == '__main__':
     app.run(debug=True)  # set debug mode = true, auto reload code without ctrl + C
