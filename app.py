@@ -18,9 +18,9 @@ def my_home():
     return render_template("home.html")
 
 
-@app.route('/content')
+@app.route('/about')
 def content_page():
-    return render_template("content.html", demo=demo, title='About')
+    return render_template("about.html", demo=demo, title='About')
 
 
 if __name__ == '__main__':
